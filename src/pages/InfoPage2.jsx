@@ -116,6 +116,7 @@ export default function Infopage2(){
                  when an unknown printer took a galley of type and 
                  scrambled it to make a type specimen book. It has 
                  survived not only five centuries</h3>
+                 
             </div>
             <br/>
 
