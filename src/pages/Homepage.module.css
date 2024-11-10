@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+.background{
+    background-color: #142360;
+}
+.main{
+    background-color: #add8e6;
+    height: 70vh;
+    width:100vw;
+    border-bottom: 1px solid white;
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+
+.centeredDiv{
+
+}
+
+
+.greeting {
+    font-size: 4rem;
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:700;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+.info{
+    font-size: 2rem;
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:300;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+.pickState{
+    height: 40px;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:300;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+.continueDiv{
+    height:30vh;
+    width:100vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.continueText{
+color: #add8e6;
+margin-top:100px;
+}
+
+.noDisplay{
+display: none;
+}
+.ContinueImg{
+    height:50px;
+    width:50px;
+    margin-top: 20px;
+}
+.animateContinue{
+position: relative;
+animation-name: upAndDown;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+
+}
+
+
+@keyframes upAndDown{
+ 0%{top:0px; left:0px}
+ 50%{top:100px; left:0px}
+ 100%{top:0px; left:0px}
+
+}
