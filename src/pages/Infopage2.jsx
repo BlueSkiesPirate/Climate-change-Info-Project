@@ -1,9 +1,11 @@
 import styles from "./Infopage.module.css"
-import planet from "/planet.png"
-import saveTheEarth from "/save-the-earth.png"
-import submarine from "/submarine.png"
-import turtle from "/turtle.png"
-import waterTemp from "/water-temperature.png"
+
+import heating from "/heating.png"
+import planet_earth from "/planet-earth.png"
+// import submarine from "/"
+import pollution from "/pollution.png"
+import water_plution from "/water-pollution.png"
+
 import ScrollToTop from "../components/scrollToTop"
 import ContinueBtn from "../components/ContinueBtn"
 import BackBtn from "../components/backBtn"
@@ -20,8 +22,9 @@ export default function Infopage2() {
         const handlescroll = () => {
             const position = window.scrollY;
             setScrollPosition(position)
+
             // const fullHeight = window.innerHeight * 3;
-            setPercentScrolled((position / 1870) * 100);
+            setPercentScrolled((position / 1835) * 100);
         }
         window.addEventListener("scroll", handlescroll)
 
@@ -46,29 +49,29 @@ export default function Infopage2() {
                 </div>
 
 
-                <img className={`${styles.image} ${styles.img1}`} src={planet}
+                <img className={`${styles.image} ${styles.img1}`} src={heating}
                     style={{
-                        height: "301px",
-                        width: "300px"
+                        height: "201px",
+                        width: "201px"
                     }} />
 
-                <img className={`${styles.image} ${styles.img2}`} src={saveTheEarth}
+                <img className={`${styles.image} ${styles.img2}`} src={planet_earth}
                     style={{
                         height: " ",
                         width: "50vw"
                     }} />
-                <img className={`${styles.image} ${styles.img3}`} src={submarine}
+                {/* <img className={`${styles.image} ${styles.img3}`} src={submarine}
                     style={{
                         height: "20vh",
                         width: "40vw"
-                    }} />
+                    }} /> */}
 
-                <img className={`${styles.image} ${styles.img4}`} src={turtle}
+                <img className={`${styles.image} ${styles.img4}`} src={water_plution}
                     style={{
                         height: "20vh",
                         width: "40vw"
                     }} />
-                <img className={`${styles.image} ${styles.img5}`} src={waterTemp}
+                <img className={`${styles.image} ${styles.img5}`} src={pollution}
                     style={{
                         height: "20vh",
                         width: "40vw"

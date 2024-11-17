@@ -1,0 +1,12 @@
+@media (max-width:450px) {
+    .container{
+        width:90%;
+    }
+    .buttons{
+        column-gap: 10px;
+        row-gap: 5px;
+        padding-left: 12px;
+
+
+    }
+}

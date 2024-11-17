@@ -1,9 +1,11 @@
 import styles from "./Infopage.module.css"
-import planet from "/planet.png"
-import saveTheEarth from "/save-the-earth.png"
-import submarine from "/submarine.png"
-import turtle from "/turtle.png"
-import waterTemp from "/water-temperature.png"
+
+import planet from "/shield.png"
+import saveTheEarth from "/absorption.png"
+// import submarine from "/submarine.png"
+import turtle from "/coral.png"
+import waterTemp from "/sea-level.png"
+
 import ScrollToTop from "../components/scrollToTop"
 import ContinueBtn from "../components/ContinueBtn"
 import BackBtn from "../components/backBtn"
@@ -23,7 +25,7 @@ export default function Infopage4() {
             const position = window.scrollY;
             setScrollPosition(position)
             const fullHeight = window.innerHeight * 3;
-            setPercentScrolled((position / 1870) * 100); /**The 1870 represents the MAX Height */
+            setPercentScrolled((position / 1835) * 100); /**The 1870 represents the MAX Height */
         }
         window.addEventListener("scroll", handlescroll)
 
@@ -57,11 +59,11 @@ export default function Infopage4() {
                         height: " ",
                         width: "50vw"
                     }} />
-                <img className={`${styles.image} ${styles.img3}`} src={submarine}
+                {/* <img className={`${styles.image} ${styles.img3}`} src={submarine}
                     style={{
                         height: "20vh",
                         width: "40vw"
-                    }} />
+                    }} /> */}
 
                 <img className={`${styles.image} ${styles.img4}`} src={turtle}
                     style={{
@@ -70,8 +72,9 @@ export default function Infopage4() {
                     }} />
                 <img className={`${styles.image} ${styles.img5}`} src={waterTemp}
                     style={{
-                        height: "20vh",
-                        width: "40vw"
+                        top: "265vh",
+                        height: "25vh",
+                        width: "50vw"
                     }} />
 
 

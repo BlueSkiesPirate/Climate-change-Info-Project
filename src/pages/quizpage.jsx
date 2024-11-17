@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import Questions from "../components/questions";
 import { useEffect } from "react";
 import ScrollToTop from "../components/scrollToTop"
+import styles from "./quizpage.module.css"
 
 export default function Quiz() {
 
@@ -18,7 +19,7 @@ export default function Quiz() {
                 <h1 className="text-5xl">Quiz</h1>
             </div>
 
-            <div className="w-full">
+            <div className={`w-full ${styles.container}`}>
                 {/* Pass setUserAnswers to Questions */}
                 <Questions page={location} />
             </div>

@@ -18,3 +18,13 @@ position: absolute;
     font-variation-settings:
       "wdth" 100;
 }
+@media (max-width:450px) {
+  .container{
+      width:100%;
+      margin: 0px;
+  }
+  .NavbarLink{
+    font-size: 1.2rem;
+  }
+
+}
