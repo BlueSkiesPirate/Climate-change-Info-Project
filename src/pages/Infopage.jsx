@@ -23,8 +23,8 @@ export default function Infopage() {
         const handlescroll = () => {
             const position = window.scrollY;
             setScrollPosition(position)
-            // const fullHeight = window.innerHeight * 3;
-            setPercentScrolled((position / 1835) * 100); /**The 1870 represents the MAX Height */
+            const fullHeight = Math.round((window.innerHeight * 3) * 0.682);
+            setPercentScrolled((position / fullHeight) * 100); /**The 1870 represents the MAX Height */
         }
         window.addEventListener("scroll", handlescroll)
 
