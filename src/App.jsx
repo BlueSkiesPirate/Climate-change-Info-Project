@@ -7,29 +7,30 @@ import Infopage4 from './pages/Infopage4'
 import Navbar from './components/Navbar'
 import AdditionalInfo from './pages/AdditionalInfo'
 import GetInvolved from './pages/GetInvolved'
+import Quiz from './pages/quizpage'
 
-import {BrowserRouter, Routes, Route} from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 function App() {
 
 
   return (
     <>
- 
-    <BrowserRouter>
-    <Navbar/>
-      <Routes>
-        <Route path='/' element={<Homepage/>}/>
-        <Route path='info' element={<Infopage/>}/>
-        <Route path='info2' element={<Infopage2/>}/>
-        <Route path='info3' element={<Infopage3/>}/>
-        <Route path='info4' element={<Infopage4/>}/>
-        <Route path="/additionalInfo" element={<AdditionalInfo/>}/>
-        <Route path='getInvolved' element={<GetInvolved/>}/>
-        
-      </Routes>
-    </BrowserRouter>
-     
+
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Homepage />} />
+          <Route path='info' element={<Infopage />} />
+          <Route path='info2' element={<Infopage2 />} />
+          <Route path='info3' element={<Infopage3 />} />
+          <Route path='info4' element={<Infopage4 />} />
+          <Route path="/additionalInfo" element={<AdditionalInfo />} />
+          <Route path='getInvolved' element={<GetInvolved />} />
+          <Route path='quiz' element={<Quiz />} />
+        </Routes>
+      </BrowserRouter>
+
     </>
   )
 }
