@@ -24,7 +24,7 @@ export default function BackBtn({ page }) {
                 setLastPage("/info3")
                 break;
             case "/quiz":
-                setLastPage("/")
+                setLastPage("/info4")
                 break;
         }
     }, [])

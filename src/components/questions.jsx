@@ -3,7 +3,7 @@ import { useState, forwardRef, useImperativeHandle } from "react";
 import BackBtn from "./backBtn";
 
 
-export default function questions({ }) {
+export default function questions({ page }) {
 
     const questions = [{
         image: "pexels-pixabay-37403.webp",
@@ -110,7 +110,7 @@ export default function questions({ }) {
 
 
             <div className="flex justify-around items-center w-full h-20">
-                <BackBtn />
+                <BackBtn page={page} />
                 <button
                     className="bg-green-500 w-36 h-20 mb-10 rounded-lg"
                     onClick={submitted}

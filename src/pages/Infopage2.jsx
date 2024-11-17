@@ -11,122 +11,110 @@ import BackBtn from "../components/backBtn"
 import { useState, useEffect } from "react"
 import { useLocation } from "react-router-dom"
 
-export default function Infopage2(){
+export default function Infopage2() {
     const [scrollPosition, setScrollPosition] = useState(0);
     const [percentScrolled, setPercentScrolled] = useState(0)
-    
+
     const location = useLocation().pathname;
-    useEffect(() =>{
-        const handlescroll =() =>{
+    useEffect(() => {
+        const handlescroll = () => {
             const position = window.scrollY;
             setScrollPosition(position)
             // const fullHeight = window.innerHeight * 3;
-            setPercentScrolled((position /1870) * 100);
+            setPercentScrolled((position / 1870) * 100);
         }
         window.addEventListener("scroll", handlescroll)
-    
-      
-    
-        return () =>{
+
+        return () => {
             window.removeEventListener("scroll", handlescroll)
         }
-      
+
     }, [])
-    
-    
-    return(
+
+
+    return (
         <>
-      
-        <ScrollToTop/>
-        <div className={styles.background}>
 
-            <div className={`${styles.progressbarBackground} bg-slate-700 fixed z-10`}
-            style={{top: scrollPosition < 40 ? 50 - scrollPosition : 10 }} >
+            <ScrollToTop />
+            <div className={styles.background}>
 
-                <div className={`${styles.progressbar} bg-teal-500`}
-                style={{width: `${percentScrolled}%`}}></div>
+                <div className={`${styles.progressbarBackground} bg-slate-700 fixed z-10`}
+                    style={{ top: scrollPosition < 40 ? 50 - scrollPosition : 10 }} >
+
+                    <div className={`${styles.progressbar} bg-teal-500`}
+                        style={{ width: `${percentScrolled}%` }}></div>
+                </div>
+
+
+                <img className={`${styles.image} ${styles.img1}`} src={planet}
+                    style={{
+                        height: "301px",
+                        width: "300px"
+                    }} />
+
+                <img className={`${styles.image} ${styles.img2}`} src={saveTheEarth}
+                    style={{
+                        height: " ",
+                        width: "50vw"
+                    }} />
+                <img className={`${styles.image} ${styles.img3}`} src={submarine}
+                    style={{
+                        height: "20vh",
+                        width: "40vw"
+                    }} />
+
+                <img className={`${styles.image} ${styles.img4}`} src={turtle}
+                    style={{
+                        height: "20vh",
+                        width: "40vw"
+                    }} />
+                <img className={`${styles.image} ${styles.img5}`} src={waterTemp}
+                    style={{
+                        height: "20vh",
+                        width: "40vw"
+                    }} />
+
+
+
+                <div className={styles.section} >
+                    <div className={styles.container}>
+                        <div className={styles.headingText}>information</div>
+                        <h3 className={styles.infoText}>Sea-level rise, combined with intensifying tropical cyclones, has worsened extreme events such as storm surges and coastal hazards like flooding, erosion, and landslides.
+                        </h3>
+                    </div>
+                    <br />
+
+                </div>
+
+
+                <div className={styles.section} >
+                    <div className={styles.container}>
+                        <div className={styles.headingText}>information</div>
+                        <h3 className={styles.infoText}>These extreme events, which used to occur once per century, are now projected to happen at least once a year in many locations.
+                            The IPCC reports that regions such as the western Tropical Pacific, the South-west Pacific, the North Pacific, the South-west Indian Ocean, and the South Atlantic are experiencing substantially faster sea-level rise.
+
+                        </h3>
+                    </div>
+                    <br />
+
+                </div>
+
+                <div className={styles.section} >
+                    <div className={styles.container}>
+                        <div className={styles.headingText}>information</div>
+                        <h3 className={styles.infoText}>Marine heatwaves have doubled in frequency and have become longer-lasting, more intense, and extensive. The IPCC states that human influence has been the main driver of ocean heat increase since the 1970s. Most marine heatwaves occurred between 2006 and 2015, leading to widespread coral bleaching and reef degradation. In 2021, nearly 60 percent of the world's ocean surface experienced at least one marine heatwave.
+                        </h3>
+
+                    </div>
+                    <br />
+
+                </div>
+                <div className="flex justify-space-around ">
+                    <BackBtn page={location} />
+                    <div className="w-0.5"></div>
+                    <ContinueBtn page={location} />
+                </div>
             </div>
-
-           
-        <img  className={`${styles.image} ${styles.img1}`} src={planet} 
-        style={{
-            height:"301px", 
-            width: "300px"
-            }}/>
-
-        <img  className={`${styles.image} ${styles.img2}`} src={saveTheEarth} 
-        style={{
-            height:" ", 
-            width: "50vw"
-            }}/>
-                    <img  className={`${styles.image} ${styles.img3}`} src={submarine} 
-        style={{
-            height:"20vh", 
-            width: "40vw"
-            }}/>
-       
-       <img  className={`${styles.image} ${styles.img4}`} src={turtle} 
-        style={{
-            height:"20vh", 
-            width: "40vw"
-            }}/>
-               <img  className={`${styles.image} ${styles.img5}`} src={waterTemp} 
-        style={{
-            height:"20vh", 
-            width: "40vw"
-            }}/>
-       
-       
-       
-        <div className={styles.section} >
-            <div className={styles.container}>
-               <div className={styles.headingText}>information</div> 
-               <h3 className={styles.infoText}>Lorem Ipsum is simply dummy text of the printing 
-                and typesetting industry. Lorem Ipsum has been the 
-                industry's standard dummy text ever since the 1500s,
-                 when an unknown printer took a galley of type and 
-                 scrambled it to make a type specimen book. It has 
-                 survived not only five centuries</h3>
-            </div>
-            <br/>
-
-       </div>
-     
-
-       <div className={styles.section} >
-            <div className={styles.container}>
-               <div className={styles.headingText}>information</div> 
-               <h3 className={styles.infoText}>Lorem Ipsum is simply dummy text of the printing 
-                and typesetting industry. Lorem Ipsum has been the 
-                industry's standard dummy text ever since the 1500s,
-                 when an unknown printer took a galley of type and 
-                 scrambled it to make a type specimen book. It has 
-                 survived not only five centuries</h3>
-            </div>
-            <br/>
-
-       </div>
-
-       <div className={styles.section} >
-            <div className={styles.container}>
-               <div className={styles.headingText}>information</div> 
-               <h3 className={styles.infoText}>Lorem Ipsum is simply dummy text of the printing 
-                and typesetting industry. Lorem Ipsum has been the 
-                industry's standard dummy text ever since the 1500s,
-                 when an unknown printer took a galley of type and 
-                 scrambled it to make a type specimen book. It has 
-                 survived not only five centuries</h3>
-                 
-            </div>
-            <br/>
-
-       </div>
-       <div className="flex justify-space-around ">
-       <BackBtn page={location}/>
-       <div className="w-0.5"></div>
-       <ContinueBtn page={location}/>
-       </div>
-       </div>
         </>
     )
 }
