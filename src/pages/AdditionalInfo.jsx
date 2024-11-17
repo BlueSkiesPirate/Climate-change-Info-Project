@@ -1,4 +1,4 @@
-import styles from "./AdditionalInfo.module.css"
+
 // import 'bootstrap/dist/css/bootstrap.min.css';
 export default function AdditionalInfo() {
     return (
