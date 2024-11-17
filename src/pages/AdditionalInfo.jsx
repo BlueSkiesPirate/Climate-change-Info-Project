@@ -5,6 +5,7 @@ export default function AdditionalInfo() {
         <>
             <div className="pt-16">
 
+
                 <h1 className={`text-4xl`}>Additional Information</h1>
 
                 <div id="picturesAndInfo">

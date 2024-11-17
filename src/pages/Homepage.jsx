@@ -29,6 +29,7 @@ export default function Homepage() {
 
             <div className={styles.main}>
 
+
                 <div className={`${styles.centeredDiv} flex flex-col items-center`}>
 
                     <h1 className={styles.greeting}>Welcome</h1>
